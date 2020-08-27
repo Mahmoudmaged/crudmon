@@ -1,0 +1,25 @@
+<%- include("./header") %> 
+ <div class="container py-5">
+ <div class="row">
+   <% for( var i = 0; i < productContainer.length; i++ ) { %>
+    <div class="col-md-4  mt-2"> 
+        <div class="card h-100 m-auto " >
+          <img src="<%= productContainer[i].imgURL %> " class="card-img-top" alt="<%= productContainer[i].name %>">
+          <div class="card-body  text-center">
+            <h5 class="card-titl"><%= productContainer[i].name %> </h5>
+            <h5 class="card-titl article<%=i%>"><%= productContainer[i].description %> </h5>
+            <p class="card-text">Price:<%= productContainer[i].price %>.00EGP</p>
+            
+            <a class="btn btn-success" href="/showmore/<%= productContainer[i]._id %> ">showmore</a>
+          </div>
+      </div>
+  </div>
+   <% } %>
+
+ </div>
+</div>
+<p class="index d-none" ><%=i%></p>
+<%- include("./footer") %> 
+<script src="/js/index.js"></script>
+</body>
+</html>

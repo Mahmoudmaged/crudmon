@@ -1,0 +1,35 @@
+<%- include("./header.ejs") %> 
+    
+
+
+<div class="container py-5 mt-2">
+    <form  action="/editform/<%= productContainer._id %>" method="POST" enctype="multipart/form-data" >
+        <div class="form-group">
+            <input value="<%= productContainer.name %>" name="name" placeholder="Enter Product Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        <div class="form-group">
+          <input value="<%= productContainer.price %>" name="price" placeholder="ADD Product price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <input value="<%=productContainer.total%>" name="total" placeholder="ADD Product quantity" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <input value="<%=productContainer.description %>" name="description" placeholder="ADD Product description" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <input value="<%= productContainer.imgURL %>" type="file" name="img" multiple class="form-control my-4" >
+        </div>
+      
+     <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+     </div>
+      </form>
+ </div>
+
+
+
+
+ 
+<%- include("./footer") %> 
+</body>
+</html>
